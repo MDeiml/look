@@ -5,6 +5,7 @@
     <title>Look</title>
 <style>
 html, body {
+    font-family: Sans-serif;
     margin: 0;
     height: 100%;
     background: black;
@@ -15,10 +16,29 @@ canvas {
     height: 100%;
     object-fit: contain;
 }
+.controls-container {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: white;
+    width: 50%;
+    height: 50%;
+}
+.controls {
+    padding: 5em;
+}
 </style>
   </head>
   <body>
     <canvas id="canvas" width="800" height="600"></canvas>
+    <div class="controls-container" style="display: none">
+      <div class="controls">
+        <center>
+          <h2>Select Image</h2>
+          <input accept="image/*" type="file" id="img_input"></input>
+        </center>
+      </div>
+    </div>
     <script src="./bootstrap.js"></script>
   </body>
 </html>
